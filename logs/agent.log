@@ -1,0 +1,18 @@
+time=2026-10-14T17:13:44.276+08:00 level=INFO msg="GUI 启动代理" mode=mode-2
+time=2026-10-14T17:13:44.277+08:00 level=INFO msg=设备启动 device=dev-nzcsy name=内阻测试仪 serial=COM4
+time=2026-10-14T17:13:44.277+08:00 level=INFO msg=设备启动 device=dev-scan02 name=扫码枪02 serial=COM5
+time=2026-10-14T17:13:44.277+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-nzcsy error="打开串口 COM4 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:44.277+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-scan02 error="打开串口 COM5 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:46.281+08:00 level=ERROR msg="Websocket 连接失败" error="dial tcp 192.168.3.159:4001: connectex: No connection could be made because the target machine actively refused it."
+time=2026-10-14T17:13:49.858+08:00 level=INFO msg="GUI 启动代理" mode=mode-3
+time=2026-10-14T17:13:49.858+08:00 level=INFO msg=设备启动 device=dev-nzcsy name=内阻测试仪 serial=COM4
+time=2026-10-14T17:13:49.859+08:00 level=INFO msg=设备启动 device=dev-scan02 name=扫码枪02 serial=COM5
+time=2026-10-14T17:13:49.859+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-nzcsy error="打开串口 COM4 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:49.859+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-scan02 error="打开串口 COM5 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:51.862+08:00 level=ERROR msg="Websocket 连接失败" error="dial tcp 192.168.3.159:4001: connectex: No connection could be made because the target machine actively refused it."
+time=2026-10-14T17:13:54.718+08:00 level=INFO msg="GUI 启动代理" mode=mode-4
+time=2026-10-14T17:13:54.718+08:00 level=INFO msg=设备启动 device=dev-nzcsy name=内阻测试仪 serial=COM4
+time=2026-10-14T17:13:54.718+08:00 level=INFO msg=设备启动 device=dev-scan02 name=扫码枪02 serial=COM5
+time=2026-10-14T17:13:54.718+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-nzcsy error="打开串口 COM4 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:54.718+08:00 level=WARN msg=串口不可用，稍后重试 device=dev-scan02 error="打开串口 COM5 失败: Serial port not found" retry_in=3s
+time=2026-10-14T17:13:56.721+08:00 level=ERROR msg="Websocket 连接失败" error="dial tcp 192.168.3.159:4001: connectex: No connection could be made because the target machine actively refused it."
