@@ -9,6 +9,12 @@ import (
 // TypeBrowser 是网关转发"浏览器 → 串口"写入指令时使用的消息类型。
 const TypeBrowser = "browser"
 
+// Message 是 agent 与网关之间的消息。
+//
+// 上行（串口 -> 网关）：id、from 均为设备 id，type 为设备名称。
+// 下行（网关 -> 串口）：type 必须是 "browser"，to 为目标设备 id；
+// 为兼容旧网关，to 为空时会尝试把 id 当作设备 id，仍无法确定且配置了
+// 多个设备时拒绝写入。
 type Message struct {
 	ID        string        `json:"id"`
 	Type      string        `json:"type"`
@@ -26,7 +32,6 @@ type SerialPayload struct {
 // 与原协议保持兼容，同时省掉 []byte <-> []int 的手工转换，
 // 并在解码时拒绝超出 0-255 的值（原来的 byte(v) 会静默截断）。
 type Bytes []byte
-
 
 func (b Bytes) MarshalJSON() ([]byte, error) {
 	out := make([]byte, 0, len(b)*4+2)

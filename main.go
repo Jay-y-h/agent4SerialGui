@@ -17,7 +17,7 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:  "agent4SerialGui",
+		Title:     "agent4SerialGui",
 		Width:     320,
 		Height:    680,
 		MinWidth:  320,
@@ -27,7 +27,8 @@ func main() {
 			Assets: assets,
 		},
 		// BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup:        app.startup,
+		OnStartup:  app.startup,
+		OnShutdown: app.shutdown,
 		Bind: []interface{}{
 			app,
 		},

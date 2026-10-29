@@ -1,0 +1,112 @@
+{
+  "log": {
+    "level": "info",
+    "file": "./logs/agent.log"
+  },
+  "modes": [
+    {
+      "id": "mode-1",
+      "name": "内阻检测",
+      "server": {
+        "url": "ws://192.168.3.159:4001/ws",
+        "agent_id": "sa-01",
+        "reconnect_interval": 5,
+        "heartbeat_interval": 30
+      },
+      "devices": [
+        {
+          "id": "dev-nzcsy",
+          "name": "内阻测试仪",
+          "serial": {
+            "port": "COM6",
+            "baud_rate": 9600,
+            "data_bits": 8,
+            "stop_bits": 1,
+            "parity": "N",
+            "read_timeout": 50
+          }
+        },
+        {
+          "id": "dev-scan02",
+          "name": "扫码枪02",
+          "serial": {
+            "port": "COM7",
+            "baud_rate": 115200
+          }
+        }
+      ]
+    },
+    {
+      "id": "mode-2",
+      "name": "保护板检测",
+      "server": {
+        "url": "ws://192.168.3.159:4001/ws",
+        "agent_id": "sa-02",
+        "reconnect_interval": 5,
+        "heartbeat_interval": 30
+      },
+      "devices": [
+        {
+          "id": "dev-bhb",
+          "name": "保护板测试仪",
+          "serial": {
+            "port": "COM4",
+            "baud_rate": 9600,
+            "data_bits": 8,
+            "stop_bits": 1,
+            "parity": "N",
+            "read_timeout": 50
+          }
+        },
+        {
+          "id": "dev-scan02",
+          "name": "扫码枪02",
+          "serial": {
+            "port": "COM7",
+            "baud_rate": 115200
+          }
+        }
+      ]
+    },
+    {
+      "id": "mode-3",
+      "name": "模式三",
+      "server": {
+        "url": "ws://192.168.3.159:4001/ws",
+        "agent_id": "sa-03",
+        "reconnect_interval": 5,
+        "heartbeat_interval": 30
+      },
+      "devices": [
+        {
+          "id": "dev-scan02",
+          "name": "扫码枪02",
+          "serial": {
+            "port": "COM7",
+            "baud_rate": 115200
+          }
+        }
+      ]
+    },
+    {
+      "id": "mode-4",
+      "name": "模式四",
+      "server": {
+        "url": "ws://192.168.3.159:4001/ws",
+        "agent_id": "sa-04",
+        "reconnect_interval": 5,
+        "heartbeat_interval": 30
+      },
+      "devices": [
+        {
+          "id": "dev-scan02",
+          "name": "扫码枪02",
+          "serial": {
+            "port": "COM7",
+            "baud_rate": 115200
+          }
+        }
+      ]
+    }
+  ]
+}
