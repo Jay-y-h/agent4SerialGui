@@ -82,13 +82,13 @@ func newAgent(cfg *config.Config, hooks Hooks) (*Agent, error) {
 
 // Run 启动信息服务、网关连接和所有串口设备，直到 ctx 结束。
 // 信息服务端口被占用等启动期错误会直接返回，不会留下半启动状态。
-func Run(ctx context.Context, cfg *config.Config, hooks Hooks) error {
+func Run(ctx context.Context, cfg *config.Config, globalConfig *config.File, hooks Hooks) error {
 	a, err := newAgent(cfg, hooks)
 	if err != nil {
 		return fmt.Errorf("初始化失败: %w", err)
 	}
 
-	info := NewInfoServer(cfg.Server.AgentID)
+	info := NewInfoServer(cfg.Server.AgentID,globalConfig.AllowOrigin)
 	if err := info.Listen(); err != nil {
 		return err
 	}

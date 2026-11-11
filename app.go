@@ -235,7 +235,7 @@ func (a *App) StartAgent() (AppState, error) {
 	slog.Info("GUI 启动代理", "mode", mode)
 
 	go func() {
-		err := service.Run(ctx, cfg, service.Hooks{
+		err := service.Run(ctx, cfg, file, service.Hooks{
 			OnGateway: a.setGateway,
 			OnDevice:  a.setDevice,
 		})

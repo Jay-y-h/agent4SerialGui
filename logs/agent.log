@@ -29,3 +29,24 @@ time=2026-10-29T08:38:42.068+08:00 level=INFO msg=设备启动 mode=mode-2 devic
 time=2026-10-29T08:38:42.068+08:00 level=WARN msg=串口不可用，稍后重试 mode=mode-2 device=dev-scan02 error="打开串口 COM5 失败: Serial port not found" retry_in=3s
 time=2026-10-29T08:38:42.068+08:00 level=WARN msg=串口不可用，稍后重试 mode=mode-2 device=dev-nzcsy error="打开串口 COM4 失败: Serial port not found" retry_in=3s
 time=2026-10-29T08:38:43.604+08:00 level=INFO msg=代理已停止 mode=mode-2
+time=2026-11-11T10:05:20.835+08:00 level=INFO msg="GUI 启动代理" mode=mode-1 mode=mode-1
+time=2026-11-11T10:05:20.837+08:00 level=INFO msg=设备启动 mode=mode-1 device=dev-nzcsy name=内阻测试仪 serial=COM8
+time=2026-11-11T10:05:20.837+08:00 level=INFO msg=设备启动 mode=mode-1 device=dev-scan02 name=扫码枪02 serial=COM6
+time=2026-11-11T10:05:20.837+08:00 level=INFO msg=串口已打开 mode=mode-1 device=dev-scan02 port=COM6
+time=2026-11-11T10:05:20.838+08:00 level=INFO msg=串口已打开 mode=mode-1 device=dev-nzcsy port=COM8
+time=2026-11-11T10:05:20.839+08:00 level=INFO msg="Websocket 连接成功" mode=mode-1 url="ws://192.168.3.159:4001/ws?id=sa-01&type=device"
+time=2026-11-11T10:05:35.582+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:06:41.284+08:00 level=WARN msg=无法路由串口写入消息 mode=mode-1 error="未知设备 \"sa-01\"" id=dev-nzcsy to=sa-01
+time=2026-11-11T10:06:41.285+08:00 level=WARN msg="Websocket 断开" mode=mode-1 error="read tcp 192.168.3.159:46424->192.168.3.159:4001: i/o timeout"
+time=2026-11-11T10:06:46.975+08:00 level=INFO msg="Websocket 连接成功" mode=mode-1 url="ws://192.168.3.159:4001/ws?id=sa-01&type=device"
+time=2026-11-11T10:07:12.783+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:07:12.788+08:00 level=WARN msg=无法路由串口写入消息 mode=mode-1 error="未知设备 \"sa-01\"" id=dev-nzcsy to=sa-01
+time=2026-11-11T10:10:43.493+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:11:47.484+08:00 level=WARN msg=无法路由串口写入消息 mode=mode-1 error="未知设备 \"sa-01\"" id=dev-nzcsy to=sa-01
+time=2026-11-11T10:11:47.486+08:00 level=WARN msg="Websocket 断开" mode=mode-1 error="read tcp 192.168.3.159:20344->192.168.3.159:4001: use of closed network connection"
+time=2026-11-11T10:11:53.372+08:00 level=INFO msg="Websocket 连接成功" mode=mode-1 url="ws://192.168.3.159:4001/ws?id=sa-01&type=device"
+time=2026-11-11T10:12:44.005+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:13:05.827+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:13:25.214+08:00 level=WARN msg=无法路由串口写入消息 mode=mode-1 error="未知设备 \"sa-01\"" id=dev-nzcsy to=sa-01
+time=2026-11-11T10:13:44.411+08:00 level=INFO msg="串口 -> 网关" mode=mode-1 device=dev-scan02 len=17
+time=2026-11-11T10:14:16.298+08:00 level=INFO msg="网关 -> 串口" mode=mode-1 device=dev-nzcsy id=dev-nzcsy len=4 hex=7472670a

@@ -185,7 +185,11 @@ export default function App() {
             <span className="truncate">{d.name || d.id}</span>
             <span className="shrink-0 text-slate-400">
               {d.port} ·{" "}
-              {!running ? "未运行" : d.state === "open" ? "已打开" : "等待设备…"}
+              {!running
+                ? "未运行"
+                : d.state === "open"
+                  ? "已打开"
+                  : "等待设备…"}
             </span>
           </div>
         ))}
@@ -214,9 +218,7 @@ export default function App() {
             </div>
           ))}
 
-          {logs.length === 0 && (
-            <div className="text-slate-300">暂无日志</div>
-          )}
+          {logs.length === 0 && <div className="text-slate-300">暂无日志</div>}
         </div>
       </section>
 
@@ -234,7 +236,7 @@ export default function App() {
           onClick={() => action(StartAgent)}
           className="h-9 rounded-md bg-blue-600 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-40"
         >
-          {busy && !running ? "请稍候..." : "▶ 启动"}
+          {busy && !running ? "请稍候..." : "▶ 打开"}
         </button>
 
         <button
@@ -242,7 +244,7 @@ export default function App() {
           onClick={() => action(StopAgent)}
           className="h-9 rounded-md border border-slate-200 bg-white text-sm hover:bg-slate-50 disabled:opacity-40"
         >
-          {busy && running ? "停止中..." : "■ 停止"}
+          {busy && running ? "停止中..." : "■ 关闭"}
         </button>
       </section>
     </main>

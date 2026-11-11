@@ -11,8 +11,9 @@ import (
 
 // File 对应整个 config.json：一份全局日志配置 + 若干模式。
 type File struct {
-	Log   LogConfig `json:"log"`
-	Modes []Mode    `json:"modes"`
+	AllowOrigin string     `json:"allow_origin"`
+	Log   		LogConfig  `json:"log"`
+	Modes 		[]Mode     `json:"modes"`
 }
 
 // Mode 是 modes 数组的一项：一个模式 = id + 名称 + 一份完整配置，
@@ -103,7 +104,7 @@ func Load(path string) (*File, error) {
 	if err != nil {
 		return nil, err
 	}
-	f := &File{Log: LogConfig{Level: "info", File: "./logs/agent.log"}}
+	f := &File{AllowOrigin: "https://app.dev", Log: LogConfig{Level: "info", File: "./logs/agent.log"}}
 	if err := json.Unmarshal(data, f); err != nil {
 		return nil, fmt.Errorf("解析配置 %s: %w", path, err)
 	}

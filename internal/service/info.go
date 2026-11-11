@@ -17,9 +17,8 @@ type InfoServer struct {
 // 本地信息服务的监听地址与允许访问的页面来源（测试里会改 infoAddr）。
 var infoAddr = "127.0.0.1:15124"
 
-const allowOrigin = "https://app.local"
 
-func NewInfoServer(agentID string) *InfoServer {
+func NewInfoServer(agentID string,allowOrigin string) *InfoServer {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/info", func(w http.ResponseWriter, r *http.Request) {
